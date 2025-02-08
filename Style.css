@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+}
+
+.main{
+    
+    background-image: url("assets/Images/bg.jpeg");
+    background-position: center center;   /* this holds the center of image at any ratios*/
+    background-repeat: no-repeat;
+    background-size: max(1200px,100vw);   /* This add zoom in and zoom out effect*/
+    height: 80vh;
+    position: relative;
+    
+    
+}
+
+.main .box{
+    height: 80vh;
+    position: absolute;
+    width: 100%;
+    opacity: 0.59;
+    top: 0;
+    background-color: black;
+    
+}
+.navbar{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60vw;                    /* this will leave space at right and left corners of navbar only if we also use margin:auto */
+    margin: auto;
+    height: 100px;
+   
+    
+}
+nav img{
+    width: 145px;
+    position: relative;
+    z-index: 10;               /* this will bring the image to front */
+    
+}
+.nav-buttons{
+    position: relative;
+    z-index: 10;
+}
+
+.text{
+    color: white;
+    display: flex;
+    height: calc(100% - 100px);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  /* this will make the text one under another */
+    position : relative;
+    font-family: 'Martel-Sans', sans-serif;
+    gap: 10px;
+    padding: 0 30px;        /* this 0 will remove the padding from top and bottom*/
+}
+.text> :nth-child(1){      /* this will select the immediate first child of .text because of this symbol (>) */
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+.text> :nth-child(2){
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.text> :nth-child(3){
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.separator{
+    background-color:  rgb(52, 51, 51);
+    height: 7px;
+}
+
+.btn{  /* this will select all the buttons */ 
+    font-family: 'Martel-Sans', sans-serif;                        
+    padding: 3px 8px;
+    font-weight: 400;
+    background-color: rgba(23, 23, 23, 0.021);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 16px;  
+    border: 0.5px solid white;
+    cursor: pointer;
+    
+    
+}
+.nav-buttons > button{
+    width: 100px;
+}
+.btn-red{
+    background-color: rgba(229,8,21,1);
+    color: rgb(255, 255, 255);
+    border-style: none;
+    padding: 5px 8px;
+}
+.btn-red:hover{
+    background-color: rgba(214, 10, 20, 0.95);
+   transition: all 0.5s ease-in-out;
+}
+.btn-red-gs{
+    background-color: rgba(229,8,21,1);;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 3px 24px;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+.btn-red-gs:hover{
+    background-color: rgba(214, 10, 20, 0.95);
+   transition: all 0.5s ease-in-out;
+}
+.text-buttons{              /*this is created because we want to decrease the size of placeholder which was not possible earlier*/
+    display: flex;
+    align-item: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.main  input{
+    padding: 7px 101px 8px 14px;
+    font-weight: bolder;
+    font-size: 12px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+} 
+
+.first-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70vw;
+    margin: auto;
+    color: white;
+    
+}
+
+
+
+.section1-img{
+    position: relative;
+    
+}
+
+.section1-img video{
+    position: absolute;
+    width: 484px;
+    top: 51px;
+    right: 0;
+
+}
+.first-section img{
+    width: 555px;
+    position: relative;
+    z-index: 10;
+ }
+
+
+/*working on Section-1 text*/
+.section1-text{
+    display: flex;
+    flex-direction: column;
+ }
+.section1-text> :nth-child(1){
+    font-size: 50px;
+    font-weight: bold;
+    padding: 31px 0;
+ }
+.section1-text> :nth-child(2){
+    font-size: 24px;
+ }
+
+ .faq{
+    padding: 34px;
+    font-size: 24px;  
+ }
+.faq h1{
+    font-weight: 400;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+}
+.faqbox:hover{
+    background-color:  #3f3f3f;
+
+}
+.faqbox{
+    background-color: #272727;    
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    max-width: 60vw;
+    margin: 34px auto;
+    padding: 20px;
+    border-radius: 8px;   
+    transition: all 0.5s ease-out;
+    cursor: pointer
+}
+.faqbox svg{
+    filter: invert(1);
+}
+
+footer{
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 14px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    
+}
+
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+footer a{
+    text-decoration: underline;
+    color:white;
+    font-size: 14px;
+}
+.question{
+    padding: 34px 0px;
+}
+
+
+
+@media screen and (max-width: 1300px){
+    .first-section{
+        flex-wrap: wrap;
+    }
+    .first-section img{
+        width: 305px;
+    }
+    .section1-img video{
+        width: 265px;
+    
+    }
+    .navbar{
+        max-width: 90vw;
+    }
+    .text-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq h1 {
+        font-size: 32px;
+        text-align: center;  
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .text> :nth-child(1){      
+        font-size: 32px;
+        
+    }
+    .text> :nth-child(2){  
+        font-size: 18px;
+    }
+    .text> :nth-child(3){      
+        font-size: 18px;
+    }
+}
